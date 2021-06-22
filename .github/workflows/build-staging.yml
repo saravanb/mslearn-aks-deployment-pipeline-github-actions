@@ -41,5 +41,5 @@ jobs:
         uses: docker/build-push-action@v2.5.0
         with:
           context: .
-          tags: latest
-          repository: contoso-website
+          push: true
+          tags: ${{ steps.meta.outputs.tags }}
